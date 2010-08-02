@@ -1,0 +1,190 @@
+testbeds:
+  home:
+    [
+     192.168.1.5: file_server,
+     192.168.1.103: kernel_test,
+    ]
+jobs:
+  accept:
+    [
+     karmic: test.suite,
+     lucid: test.suite,
+     Gloria: test.suite,
+    ]
+  bench:
+    [
+     aim9: overall system performance testing suite,
+     unixbench: overall system performance testing suite,
+    ]
+  dbench:
+    [
+     dapper: dbench test on dapper,
+     hardy: dbench test on hardy,
+     server: dbench test on ubuntu server,
+    ]
+  ltp:
+    [
+     dapper: Linux Test Project testing on dapper,
+     hardy: Linux Test Project testing on hardy,
+     server: Linux Test Project testing on ubuntu server,
+    ]
+  ltpstress:
+    [
+     dapper: LTP stress test on dapper,
+     hardy: LTP stress test on hardy,
+     server: LTP stress test on ubuntu server,
+    ]
+  net_stress:
+    [
+     dapper: netperf test on dapper,
+     hardy: netperf test on hardy,
+     server: netperf test on ubuntu server,
+    ]
+  system_stress:
+    [
+     dapper: debian stress test on dapper,
+     hardy: debian stress test on hardy,
+     server: debian stress test on ubuntu server,
+    ]
+
+testsuite:
+  accept:
+    [
+     CONFIG: file of user specified variables,
+     HARNESS: common routines used by TestBed,
+     REMOTEAGENT: remote agent executes programs on systems under test,
+     RUNNER: the test runner,
+     TESTSRC: the source program that holds acceptance tests,
+    ]
+  all:
+    [
+     BENCHSRC: UnixBench source files,
+     CONFIG: file of user specified variables,
+     HARNESS: common routines used by TestBed,
+     LTPSRC: LTP source files,
+     NETPERF: the network performance benchmark program,
+     REMOTEAGENT: remote agent executes programs on systems under test,
+     RUNNER: the test runner,
+     TESTSRC: the source program that holds acceptance tests,
+    ]
+  bench:
+    [
+     BENCHRUN: java source to run UnixBench,
+     BENCHSRC: UnixBench source files,
+     CONFIG: file of user specified variables,
+     HARNESS: common routines used by TestBed,
+     REMOTEAGENT: remote agent executes programs on systems under test,
+    ]
+  dbench:
+    [
+     CONFIG: file of user specified variables,
+     HARNESS: common routines used by TestBed,
+     REMOTEAGENT: remote agent executes programs on systems under test,
+    ]
+  ltp:
+    [
+     CONFIG: file of user specified variables,
+     HARNESS: common routines used by TestBed,
+     LTPSRC: LTP source files,
+     REMOTEAGENT: remote agent executes programs on systems under test,
+    ]
+  ltpstress:
+    [
+     CONFIG: file of user specified variables,
+     HARNESS: common routines used by TestBed,
+     LTPSRC: LTP source files,
+     REMOTEAGENT: remote agent executes programs on systems under test,
+    ]
+  net_stress:
+    [
+     CONFIG: file of user specified variables,
+     HARNESS: common routines used by TestBed,
+     NETPERF: the network performance benchmark program,
+     REMOTEAGENT: remote agent executes programs on systems under test,
+    ]
+  system_stress:
+    [
+     CONFIG: file of user specified variables,
+     HARNESS: common routines used by TestBed,
+     REMOTEAGENT: remote agent executes programs on systems under test,
+    ]
+
+packages:
+  pyrering:
+    [
+     build-essential: build related programs,
+     flex: flex package (required to build LTP),
+     libaio-dev: required for 20090121 LTP,
+     memtester: used by some test cases,
+     ngrep: used by some test cases,
+     sun-java6-jdk: used to execute runbench.java,
+     time: package for time,
+     zip: server instances will need this to build LTP,
+    ]
+  testbed:
+    [
+     python-mysqldb: mysqldb for Python (used by SETUP.py),
+     python-yaml: YAML parser for Python (required for TestBed),
+    ]
+
+platforms:
+  i386:
+  i686:
+  x86_64:
+
+constants:
+  database:
+    [
+     DBNAME: testbed,
+     DBUSER: root,
+     DBTMACH: machine_machine,
+     DBTRESULTS: tests_testresults,
+     DBTSESSION: tests_session,
+     DBTSUITE: tests_testsuite,
+     DBTTESTS: tests_testcase,
+     DBPASSWD: <dbpasswd>,
+    ]
+  filenames:
+    [
+     AIM: aim9-32bit.tar,
+     BENCH: unixbench-5.1.2.tar.gz,
+     BENCHJAVA: runbench.java,
+     INVFILE: header_info.txt,
+     LSBFILE: /etc/lsb-release,
+     LTP: ltp-current.tgz,
+     TESTS: tests,
+    ]
+  links:
+    [
+     URLHOME: "http://king:8000/media/logs",
+    ]
+  pathnames:
+    [
+     BACKUPTESTSRC: /home/kdlucas/tests/tests.tgz,
+     BENCHSRC: /home/kdlucas/tests/benchmark/unixbench-5.1.2.tar.gz,
+     BENCHRUN: /home/kdlucas/tests/benchmark/runbench.java,
+     CONFIG: /home/kdlucas/src/testbed/testbed.yaml,
+     HARNESS: /home/kdlucas/src/testbed/harness.py,
+     LTPSRC: /home/kdlucas/tests/ltp/ltp-current.tgz,
+     NETPERF: /home/kdlucas/tests/tools/netperf,
+     PUBKEY: /home/kdlucas/.ssh/id_rsa.pub,
+     REMOTEAGENT: /home/kdlucas/src/testbed/ragent.py,
+     ROOT: /var/tmp/,
+     RUNNER: /home/kdlucas/tests/runner/pyrering.0.9.tgz,
+     TESTSRC: /home/kdlucas/tests/accept/tests.tgz,
+    ]
+  roles:
+    [
+     MAILTO: <username>,
+     ROLE: <username>,
+     REPORTHOST: <hostname>,
+    ]
+  strings:
+    [
+     PKVAL: <username>@<hostname>,
+    ]
+  values:
+    [
+     STRESSTIME: 8,
+     REBOOTTIME: 300,
+    ]
