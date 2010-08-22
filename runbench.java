@@ -4,7 +4,7 @@
 
 /**
  *
- * @author kdlucas@google.com (Kelly Lucas)
+ * @author kdlucas@gmail.com (Kelly Lucas)
  * This program will drive the UnixBench program. The problem I ran into when
  * trying to drive the UnixBench program from Python, is that I would get
  * broken pipes during the pipe base context switching tests. Using this Java

@@ -49,7 +49,7 @@ A yaml file (testbed.yaml) is used to hold data on:
 harness.py - Utility functions that all modules depend on and use.
 """
 
-__author__ = 'kdlucas@google.com (Kelly Lucas)'
+__author__ = 'kdlucas@gmail.com (Kelly Lucas)'
 __version__ = '1.0.0'
 
 import getpass

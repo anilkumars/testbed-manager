@@ -20,7 +20,7 @@ Various classes will need access to these shared functions. Depends on
 testbed.yaml, which provides constants which can be edited by users.
 """
 
-__author__ = 'kdlucas@google.com (Kelly Lucas)'
+__author__ = 'kdlucas@gmail.com (Kelly Lucas)'
 
 import datetime
 import fileinput
